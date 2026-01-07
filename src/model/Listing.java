@@ -1,11 +1,13 @@
 package model;
 
+//reprsents a property listing in the system
 public class Listing {
     private int id;
     private String title;
     private double price;
     private Homeowner owner;
 
+    //creates new listing
     public Listing(int id, String title, double price, Homeowner owner) {
         this.id = id;
         this.title = title;

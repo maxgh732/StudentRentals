@@ -4,16 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 import model.*;
 
+//the service class is responsible for managing property listings
 public class ListingService {
+    //stores listings in the system
     private List<Listing> listings = new ArrayList<>();
     private int nextId = 1;
-
+    
+    //creates new listing
     public void createListing(String title, double price, Homeowner owner) {
         Listing l = new Listing(nextId++, title, price, owner);
-        listings.add(l);
+        listings.add(l); //adds listing to the system
         System.out.println("Listing created: " + l.getTitle());
     }
 
+    //displays all avaible listings
     public void viewListings() {
         if (listings.isEmpty()) {
             System.out.println("No listings available.");
@@ -24,6 +28,7 @@ public class ListingService {
         }
     }
 
+    //searches listings by key word
     public void searchListingsByKeyword(String keyword) {
         boolean found = false;
         for (Listing l : listings) {
@@ -35,6 +40,7 @@ public class ListingService {
         if (!found) System.out.println("No listings found.");
     }
 
+    //searches listing by price
     public void searchListingsByPrice(double min, double max) {
         boolean found = false;
         for (Listing l : listings) {
@@ -57,6 +63,7 @@ public class ListingService {
         if (!found) System.out.println("No listings found.");
     }
 
+    // returns listings
     public List<Listing> getListings() {
         return listings;
     }

@@ -1,5 +1,10 @@
 package model;
 
+/**
+ *represents a booking made by a student for a property listing.
+ *A booking links a student to a listing and tracks the
+ *current status of the booking (e.g. confirmed, cancelled).
+ */
 public class Booking {
     private Student student;
     private Listing listing;
