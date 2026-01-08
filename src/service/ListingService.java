@@ -24,7 +24,7 @@ public class ListingService {
             return;
         }
         for (Listing l : listings) {
-            System.out.println(l.getId() + ": " + l.getTitle() + " (£" + l.getPrice() + ")");
+            System.out.println(l.getId() + ": " + l.getTitle() + " (GBP " + l.getPrice() + ")");
         }
     }
 
@@ -33,7 +33,7 @@ public class ListingService {
         boolean found = false;
         for (Listing l : listings) {
             if (l.getTitle().toLowerCase().contains(keyword.toLowerCase())) {
-                System.out.println(l.getId() + ": " + l.getTitle() + " (£" + l.getPrice() + ")");
+                System.out.println(l.getId() + ": " + l.getTitle() + " (GBP " + l.getPrice() + ")");
                 found = true;
             }
         }
@@ -45,7 +45,7 @@ public class ListingService {
         boolean found = false;
         for (Listing l : listings) {
             if (l.getPrice() >= min && l.getPrice() <= max) {
-                System.out.println(l.getId() + ": " + l.getTitle() + " (£" + l.getPrice() + ")");
+                System.out.println(l.getId() + ": " + l.getTitle() + " (GBP " + l.getPrice() + ")");
                 found = true;
             }
         }
@@ -56,14 +56,14 @@ public class ListingService {
         boolean found = false;
         for (Listing l : listings) {
             if (l.getTitle().toLowerCase().contains(keyword.toLowerCase())) {
-                System.out.println(l.getId() + ": " + l.getTitle() + " (£" + l.getPrice() + ")");
+                System.out.println(l.getId() + ": " + l.getTitle() + " (GBP " + l.getPrice() + ")");
                 found = true;
             }
         }
         if (!found) System.out.println("No listings found.");
     }
 
-    // returns listings
+    //returns listings
     public List<Listing> getListings() {
         return listings;
     }
